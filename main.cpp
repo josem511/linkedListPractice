@@ -186,34 +186,3 @@ void removeData(node * & h, node * & t, char d){
         }
     }
 }
-
-
-
-
-// void addDataInOrder(node * & h, char d) {
-//     //check if list is empty or d is smallest in list
-//     if (!h || d < h -> data) {
-//         addDataAtStart(h, d);
-//     }
-//     else {
-//     //two temp pointers
-//     node * ptr1 = h;
-//     node * ptr2 = h -> next;
-
-//     //traverse until 2nd ptr gets to NULL or if its value is bigger than d
-//     while (ptr2 && ptr2 -> data < d) {
-//         ptr1 = ptr2;
-//         ptr2 = ptr2 -> next;
-//     }
-
-//     //allocate mem for new node
-//     node * newnode = new node;
-//     newnode -> data = d;
-
-//     //update ptrs
-//     ptr1 -> next = newnode;
-//     newnode -> next = ptr2;
-//     }
-
-//     //traverse(h);
-// }
