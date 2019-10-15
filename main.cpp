@@ -15,6 +15,7 @@ void addDataInOrder(node * & h, node * & t, char d);
 void removeAtStart(node * & h, node * & t);
 void removeAtEnd(node * & h, node * & t);
 void removeData(node * & h, node * & t, char d);
+void removeList(node * & h, node * & t);
 
 
 int main() {
@@ -76,7 +77,10 @@ int main() {
     traverse(h3);
     std::this_thread::sleep_for (std::chrono::seconds(1));
 
-    
+	removeList(h1,t1);
+	removeList(h2,t2);
+	removeList(h3,t3);
+	
     return 0;
 }
 
@@ -186,3 +190,9 @@ void removeData(node * & h, node * & t, char d){
         }
     }
 }
+
+void removeList(node * & h, node * & t){
+	while (h)
+		removeAtStart(h,t);
+}
+
